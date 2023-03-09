@@ -1,0 +1,4 @@
+Para ejecutar el programa de ejemplo:
+
+    java -cp core-1.0-SNAPSHOT.jar es.uca.dss.agoratech.App
+    
