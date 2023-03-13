@@ -1,0 +1,43 @@
+classDiagram
+    class Libreria {
+        +consultarDisponibilidad(fechaRecogida:Date, fechaDevolucion:Date): List<Autocaravana>
+        +registrarCliente(cliente:Cliente): void
+        +editarDatosCliente(idCliente:int, datos:Map<String,String>): void
+        +consultarDatosCliente(idCliente:int): Cliente
+        +realizarReserva(reserva:Reserva): void
+        +cancelarReserva(idReserva:int): void
+        +consultarReservas(idCliente:int): List<Reserva>
+        +checkIn(idReserva:int): void
+        +checkOut(idReserva:int): void
+        +registrarVehiculo(vehiculo:Vehiculo): void
+        +editarDatosVehiculo(matricula:String, datos:Map<String,String>): void
+        +consultarDatosVehiculo(matricula:String): Vehiculo
+    }
+
+    class Cliente {
+        -id:int
+        -nombre:String
+        -telefono:String
+        -email:String
+        -direccion:String
+    }
+
+    class Vehiculo {
+        -matricula:String
+        -tipo:String
+        -capacidad:int
+        -precio:double
+    }
+
+    class Reserva {
+        -id:int
+        -fechaRecogida:Date
+        -fechaDevolucion:Date
+        -cliente:Cliente
+        -vehiculo:Vehiculo
+        -estado:String
+    }
+
+    Libreria --> Cliente
+    Libreria --> Vehiculo
+    Libreria --> Reserva
