@@ -15,6 +15,8 @@ package es.uca.dss.agoratech;
 //     +consultarDatosVehiculo(matricula:String): Vehiculo
 // }
 
+// ! CUIDADO que usamos vehiculos y no autocaravanas
+// TODO cambiarlo en el diagrama de clases tambien
 public class Autocaravanas {
     public List<Autocaravana> consultarDisponibilidad(Date fechaRecogida, Date fechaDevolucion) {
         List<Autocaravana> lista = new ArrayList<Autocaravana>();
