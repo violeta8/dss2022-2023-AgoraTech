@@ -1,6 +1,6 @@
 classDiagram
-    class Libreria {
-        +consultarDisponibilidad(fechaRecogida:Date, fechaDevolucion:Date): List<Autocaravana>
+    class Autocaravanas {
+        +consultarDisponibilidad(fechaRecogida:Date, fechaDevolucion:Date): List<Vehiculo>
         +registrarCliente(cliente:Cliente): void
         +editarDatosCliente(idCliente:int, datos:Map<String,String>): void
         +consultarDatosCliente(idCliente:int): Cliente

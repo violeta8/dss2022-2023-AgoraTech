@@ -1,7 +1,7 @@
 package es.uca.dss.agoratech;
 
-// class Biblioteca {
-//     +consultarDisponibilidad(fechaRecogida:Date, fechaDevolucion:Date): List<Autocaravana>
+// class Autocaravanas {
+//     +consultarDisponibilidad(fechaRecogida:Date, fechaDevolucion:Date): List<Vehiculo>
 //     +registrarCliente(cliente:Cliente): void
 //     +editarDatosCliente(idCliente:int, datos:Map<String,String>): void
 //     +consultarDatosCliente(idCliente:int): Cliente
@@ -15,13 +15,11 @@ package es.uca.dss.agoratech;
 //     +consultarDatosVehiculo(matricula:String): Vehiculo
 // }
 
-// ! CUIDADO que usamos vehiculos y no autocaravanas
-// TODO cambiarlo en el diagrama de clases tambien
 public class Autocaravanas {
-    public List<Autocaravana> consultarDisponibilidad(Date fechaRecogida, Date fechaDevolucion) {
-        List<Autocaravana> lista = new ArrayList<Autocaravana>();
-        for (Autocaravana vehiculo : listaVehiculos) {
-            if (vehiculo.getTipo().equals("Autocaravana") && vehiculo.getDisponible()) {
+    public List<Vehiculo> consultarDisponibilidad(Date fechaRecogida, Date fechaDevolucion) {
+        List<Vehiculo> lista = new ArrayList<Vehiculo>();
+        for (Vehiculo vehiculo : listaVehiculos) {
+            if (vehiculo.getDisponible()) {
                 lista.add(vehiculo);
             }
         }
